@@ -1,4 +1,6 @@
 #!/bin/zsh
+
+echo available space  ;df -h | grep disk3 | awk '{print$4}'
 rm -rf ~/Library/Caches/*
 rm -rf ~/Library/42_cache
 rm -rf ~/Library/Safari/*
@@ -10,3 +12,4 @@ rm -rf ~/Library/Application\ Support/Code/Cache/*
 rm -rf ~/Library/Application\ Support/Code/CachedData/*
 rm -rf ~/Library/Application\ Support/Code/User/workspaceStoratge
 rm -fr /Users/longshot/Library/Containers/com.docker.docker/Data/vms/*
+echo available space  ;df -h | grep disk3 | awk '{print$4}'
