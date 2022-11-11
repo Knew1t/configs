@@ -235,7 +235,7 @@ Set the directory to store the cache files: >
 
                                                         *'g:ctrlp_show_hidden'*
 Set this to 1 if you want CtrlP to scan for dotfiles and dotdirs: >
-  let g:ctrlp_show_hidden = 0
+  let g:ctrlp_show_hidden = 1
 <
 Note: does not apply when a command defined with |g:ctrlp_user_command| is
 being used.
