@@ -1,3 +1,4 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -70,10 +71,9 @@ ZSH_THEME="crunch"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(vi-mode git)
 
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -87,7 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -99,8 +98,38 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias foo="gcc -Wall -Werror -Wextra -std=c11"
+
+alias foo="gcc -g -Wall -Werror -Wextra -std=c11"
 alias fa="./a.out"
-alias fe="rm a.out"
+alias fe="rm a.out; rm -rf a.out.dS*"
 alias format="clang-format -style=llvm -dump-config > .clang-format"
+alias cache="~/cache.sh"
+alias rtf="base64 /dev/urandom | head -c 5000 > random_text.txt; base64 /dev/urandom | head -c 5000 >> random_text.txt;"
+alias vim='mvim -v'
+alias vims='vim -S Session.vim'
+alias ma='make;./a.out'
+alias dbg='lldb a.out'
+alias vg="valgrind --leak-check=full \
+         --show-leak-kinds=all \
+         --track-origins=yes \
+         --verbose \
+         --log-file=valgrind-out.txt "
+alias leeks="leaks -atExit --  "
+alias lg='lazygit'
+alias cf="clang-format -n ./*.c"
+alias govim='~/.config/nvim/'
+alias dcp='docker exec -d sweet_allen rm -rf /root/src;  docker cp . sweet_allen:/root/src;'
+alias dst='docker start -i sweet_allen'
 export PATH="/Users/longshot/homebrew/bin:$PATH"
+#AUTO TMUX 
+# Tmux
+    if [[ -z "$TMUX" ]]; then
+        if tmux has-session 2>/dev/null; then
+            exec tmux attach
+        else
+            exec tmux
+        fi
+    fi
+# while true; do 
+#    curl ascii.live/rick
+#done &
