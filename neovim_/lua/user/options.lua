@@ -47,3 +47,7 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd "let g:everforest_background = 'hard'"
+
+-- Folding with tresitter
+vim.cmd([[ set foldmethod=expr ]])
+vim.cmd([[ set foldexpr=nvim_treesitter#foldexpr() ]])
