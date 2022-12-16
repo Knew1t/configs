@@ -50,6 +50,12 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
+-- center after C-d C-u
+keymap("n", "<C-d>","<C-d>zz", opts)
+keymap("v", "<C-d>","<C-d>zz", opts)
+keymap("n", "<C-u>","<C-u>zz", opts)
+keymap("v", "<C-u>","<C-u>zz", opts)
+
 -- Visual --
 -- Stay in indent mode
 -- keymap("v", "<", "<gv", opts)
@@ -73,4 +79,5 @@ keymap("i", "kj", "<ESC>", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
+--SUBSTITUTION GLOBAL
+keymap("v", "<leader>r","\"hy:%s/<C-r>h//g<left><left>", opts)
