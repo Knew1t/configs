@@ -81,3 +81,4 @@ keymap("v", "<C-u>","<C-u>zz", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --SUBSTITUTION GLOBAL
 keymap("v", "<leader>r","\"hy:%s/<C-r>h//g<left><left>", opts)
+keymap("n", "<leader>r",":SqlsExecuteQuery<CR>", opts)

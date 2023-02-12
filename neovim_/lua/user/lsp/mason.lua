@@ -9,6 +9,8 @@ local servers = {
 	-- "yamlls",
 	"clangd",
   "cmake",
+  "sqls",
+  "bashls",
 }
 
 local settings = {
