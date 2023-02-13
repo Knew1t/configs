@@ -1,5 +1,6 @@
 local servers = {
-	"sumneko_lua",
+	-- "sumneko_lua",
+	"lua_ls",
 	-- "cssls",
 	-- "html",
 	-- "tsserver",
@@ -8,9 +9,9 @@ local servers = {
 	-- "jsonls",
 	-- "yamlls",
 	"clangd",
-  "cmake",
-  "sqls",
-  "bashls",
+	"cmake",
+	"sqls",
+	"bashls",
 }
 
 local settings = {
@@ -46,13 +47,13 @@ for _, server in pairs(servers) do
 	}
 
 	server = vim.split(server, "@")[1]
---BEZLANT
+	--BEZLANT
 	-- local has_custom_opts, custom_opts = pcall(require, "user.lsp.settings." .. server)
 	--
 	-- if has_custom_opts then
 	-- 	opts = vim.tbl_deep_extend("force", custom_opts, opts)
 	-- end
---BEZLANT
+	--BEZLANT
 
 	local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)
 	if require_ok then
