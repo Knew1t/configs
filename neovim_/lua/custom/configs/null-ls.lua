@@ -17,9 +17,12 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+
+
 }
 
 null_ls.setup {
   debug = true,
   sources = sources,
+  virtual_text = false,
 }

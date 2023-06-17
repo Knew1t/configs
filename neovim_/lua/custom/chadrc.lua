@@ -12,7 +12,9 @@ M.ui = {
   hl_add = highlights.add,
   nvdash = {
     load_on_startup = true,
-  }
+  },
+  lsp = {
+  },
 }
 
 M.plugins = "custom.plugins"
