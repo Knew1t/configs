@@ -8,3 +8,6 @@
 local opt = vim.opt
 opt.relativenumber = true
 opt.swapfile = false
+opt.foldmethod = "syntax"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+
