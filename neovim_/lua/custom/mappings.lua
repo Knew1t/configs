@@ -10,28 +10,33 @@ M.disabled = {
     ["<A-j>"] = "",
     ["<A-k>"] = "",
     ["<A-l>"] = "",
-    -- disable terminal 
-    ["<A-i"] = "",
-    ["<A-h"] = "",
-    ["<A-v"] = "",
+    -- disable terminal
+    ["<A-i>"] = "",
+    ["<A-h>"] = "",
+    ["<A-v>"] = "",
+    ["<M-i>"] = "",
     -- disable themes
     ["<leader>t"] = "",
   },
   i = {
+    ["<C-b>"] = "",
+    ["<C-e>"] = "",
     ["<C-h>"] = "",
     ["<C-l>"] = "",
     ["<C-j>"] = "",
     ["<C-k>"] = "",
-    -- disable terminal 
+    -- disable terminal
     ["<A-i"] = "",
     ["<A-h"] = "",
     ["<A-v"] = "",
     ["<A-j>"] = "",
     ["<A-k>"] = "",
     ["<A-l>"] = "",
+    ["<leader>n"] = "",
+    ["<leader>rn"] = "",
   },
   v = {
-    -- disable terminal 
+    -- disable terminal
     ["<A-i"] = "",
     ["<A-h"] = "",
     ["<A-v"] = "",
@@ -44,8 +49,7 @@ M.disabled = {
     ["<A-i"] = "",
     ["<A-h"] = "",
     ["<A-v"] = "",
-
-  }
+  },
 }
 
 M.general = {
@@ -53,8 +57,6 @@ M.general = {
     -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
   },
 }
-
-
 
 -- more keybinds!
 return M
