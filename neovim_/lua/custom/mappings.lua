@@ -56,6 +56,9 @@ M.general = {
   n = {
     -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
   },
+  v = {
+  ["<leader>ra"] = {"\"hy:%s/<C-r>h//gc<left><left><left>"},
+  },
 }
 
 -- more keybinds!
