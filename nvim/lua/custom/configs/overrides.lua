@@ -1,4 +1,5 @@
 local M = {}
+local cmp = require "cmp"
 
 M.treesitter = {
   ensure_installed = {
@@ -54,6 +55,12 @@ M.nvimtree = {
         git = true,
       },
     },
+  },
+}
+M.cmp = {
+  mapping = {
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
   },
 }
 

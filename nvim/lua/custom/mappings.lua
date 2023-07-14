@@ -59,6 +59,9 @@ M.general = {
     -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<C-f>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
   },
+  i = {
+
+  },
   v = {
     ["<leader>ra"] = { '"hy:%s/<C-r>h//g<left><left>' },
   },

@@ -1,6 +1,7 @@
 local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
+local cmp = require "cmp"
 local plugins = {
 
   -- Override plugin definition options
@@ -23,6 +24,11 @@ local plugins = {
   },
 
   -- override plugin configs
+  {
+    "hrsh7th/nvim-cmp",
+    opts = overrides.cmp,
+
+  },
   {
     "williamboman/mason.nvim",
     opts = overrides.mason,
@@ -60,14 +66,6 @@ local plugins = {
     lazy = false,
   },
 
-  -- {
-  --   "christoomey/vim-tmux-navigator",
-  --   enabled = true,
-  --   lazy = false,
-  --   -- config = function()
-  --   --   return require("tmux").setup()
-  --   -- end,
-  -- },
   {
     "aserowy/tmux.nvim",
     config = function()
