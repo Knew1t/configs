@@ -63,5 +63,18 @@ M.cmp = {
     ["<C-j>"] = cmp.mapping.select_next_item(),
   },
 }
+local actions = require "telescope.actions"
+M.telescope = {
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-n>"] = actions.nop,
+        ["<C-p>"] = actions.nop,
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+      },
+    },
+  },
+}
 
 return M
