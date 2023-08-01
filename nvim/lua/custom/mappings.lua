@@ -58,10 +58,14 @@ M.general = {
   n = {
     -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<C-f>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
-  },
-  i = {
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
+    ["J"] = { "mzJ`z" }, -- when J, cursor stays in position
+    ["n"] = { "nzzzv"},
+    ["N"] = { "Nzzzv"},
 
   },
+  i = {},
   v = {
     ["<leader>ra"] = { '"hy:%s/<C-r>h//g<left><left>' },
   },

@@ -66,6 +66,9 @@ M.cmp = {
 local actions = require "telescope.actions"
 M.telescope = {
   defaults = {
+    vimgrep_arguments = {
+      "--no-ignore",
+    },
     mappings = {
       i = {
         ["<C-n>"] = actions.nop,
@@ -73,6 +76,11 @@ M.telescope = {
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
       },
+    },
+  },
+  extensions = {
+    file_browser = {
+      respect_gitignore = false,
     },
   },
 }
