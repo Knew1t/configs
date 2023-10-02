@@ -19,6 +19,10 @@ for _, lsp in ipairs(servers) do
         virtual_text = false,
       }),
     },
+    cmd = {
+      "clangd",
+      "--offset-encoding=utf-16",
+    },
   }
 end
 

@@ -14,11 +14,9 @@ M.ui = {
     load_on_startup = false,
   },
   lsp = {},
-  --  cmp = {
-  --    mapping = {
-  --      ["<C-n"] = mapping.select_next_item(),
-  --    },
-  --  },
+  tabufline = {
+    enabled = false,
+  },
 }
 
 M.plugins = "custom.plugins"

@@ -3,6 +3,7 @@ local M = {}
 
 M.disabled = {
   n = {
+    ["<Esc>"] = "",
     ["<C-h>"] = "",
     ["<C-l>"] = "",
     ["<C-j>"] = "",
@@ -39,6 +40,7 @@ M.disabled = {
   },
   v = {
     -- disable terminal
+    ["<Esc>"] = "",
     ["<A-i"] = "",
     ["<A-h"] = "",
     ["<A-v"] = "",
@@ -57,6 +59,7 @@ M.disabled = {
 M.general = {
   n = {
     -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader><CR>"] = { ":noh <CR>", "Clear highlights" },
     ["<C-f>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
@@ -68,6 +71,7 @@ M.general = {
   i = {},
   v = {
     ["<leader>ra"] = { '"hy:%s/<C-r>h//g<left><left>' },
+    ["<leader><CR>"] = { ":noh <CR>", "Clear highlights" },
   },
 }
 
