@@ -1,13 +1,6 @@
 return {
     {
-        'ellisonleao/gruvbox.nvim',
-        name = 'gruvbox',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme gruvbox]])
-        end,
-    },
-
+        'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
@@ -24,11 +17,20 @@ return {
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
-    { 'L3MON4D3/LuaSnip' },
     { 'nvim-tree/nvim-tree.lua' },
 
+    -- snippets
 
+    {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp",
+    },
+    { "rafamadriz/friendly-snippets" },
     -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+    { 'saadparwaiz1/cmp_luasnip' },
     {
         'numToStr/Comment.nvim',
         opts = {
