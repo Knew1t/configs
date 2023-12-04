@@ -50,4 +50,5 @@ return {
         end,
         lazy = false,
     },
+    { "ray-x/web-tools.nvim" },
 }
