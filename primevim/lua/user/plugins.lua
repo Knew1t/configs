@@ -11,6 +11,7 @@ return {
     { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
     { "theprimeagen/harpoon" },
     { "tpope/vim-surround" },
+    { "tpope/vim-repeat" },
     { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
