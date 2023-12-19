@@ -33,4 +33,5 @@ vim.opt.guicursor = "i:block"
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
-vim.opt.hlsearch = true
+vim.opt.hlsearch = true -- highlight every iterm on page while searching
+vim.opt.ignorecase = true --ignore search case
