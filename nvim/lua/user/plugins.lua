@@ -9,7 +9,7 @@ return {
     },
 
     { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
-    { "theprimeagen/harpoon" },
+    -- { "theprimeagen/harpoon" },
     { "tpope/vim-surround" },
     { "tpope/vim-repeat" },
     { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
