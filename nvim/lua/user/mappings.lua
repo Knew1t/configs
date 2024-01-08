@@ -49,3 +49,5 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("n", "<Space><CR>", ":noh <CR>")
+
+vim.keymap.set("n", "<leader>c", ":wall <CR> :!npm run build<CR>");
