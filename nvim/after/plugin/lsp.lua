@@ -32,7 +32,12 @@ require('mason-lspconfig').setup({
 
         }
       })
-    end
+    end,
+    -- denols = function()
+    --   require('lspconfig').denols.setup({
+    --     root_dir:root_pattern("deno.json", "deno.jsonc", ".git", "package.json"),
+    --   })
+    -- end
   }
 })
 
@@ -66,6 +71,7 @@ require('lspconfig').emmet_language_server.setup({
     variables = {},
   },
 })
+
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
