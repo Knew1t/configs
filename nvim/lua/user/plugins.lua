@@ -25,7 +25,7 @@ return {
   {
     "L3MON4D3/LuaSnip",
     -- follow latest release.
-    version = "v2.*",     -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     -- install jsregexp (optional!).
     build = "make install_jsregexp",
   },
@@ -42,12 +42,22 @@ return {
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
-    opts = {}     -- this is equalent to setup({}) function
+    opts = {} -- this is equalent to setup({}) function
   },
   {
     "aserowy/tmux.nvim",
     config = function()
-      return require("tmux").setup()
+      return require("tmux").setup({
+        copy_sync = {
+          -- overwrites vim.g.clipboard to redirect * and + to the system
+          -- clipboard using tmux. If you sync your system clipboard without tmux,
+          -- disable this option!
+          sync_clipboard = true,
+
+          -- synchronizes registers *, +, unnamed, and 0 till 9 with tmux buffers.
+          sync_registers = true,
+        }
+      })
     end,
     lazy = false,
   },
